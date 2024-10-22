@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/History_back"
+    android:orientation="vertical"
+    android:id="@+id/container"
+    tools:context=".History">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="History"
+            android:fontFamily="serif-monospace"
+            android:textStyle="bold"
+            android:textSize="23sp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/white"
+            android:layout_marginStart="16dp"
+            />
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:src="@drawable/toolbr"
+            android:layout_marginEnd="16dp"
+            android:id="@+id/setting"
+            android:layout_gravity="center_vertical"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabIndicatorColor="@color/Background"
+        app:tabSelectedTextColor="@android:color/black"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="16dp"
+
+        app:tabTextColor="@android:color/darker_gray"
+        app:tabBackground="@color/linear"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="16dp"/>
+
+</LinearLayout>

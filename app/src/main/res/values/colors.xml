@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="Background">#FDB623</color>
+    <color name="White">#FEFEFE</color>
+    <color name="LightBlack">#333333</color>
+    <color name="red">#E92525</color>
+    <color name="linear">#333333</color>
+    <color name="transparent_lavender">#00FFC107</color>
+    <color name="History_back">#3D3D3D</color>
+    <color name="Result_back">#525252</color>
+
+
+
+
+</resources>

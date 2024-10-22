@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Scanner"
+    android:background="@color/linear"
+    android:id="@+id/Scanner_Container"
+    tools:ignore="MissingClass">
+
+    <!-- Icons at the top (Gallery, Flash, Camera Switch) -->
+    <!-- Top Icons (Gallery, Flash, Camera Switch) -->
+    <LinearLayout
+        android:id="@+id/topIconsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:padding="10dp"
+        android:layout_marginHorizontal="30dp"
+        android:visibility="gone"
+        android:background="@drawable/top_icon_back">
+
+        <!-- Gallery Icon -->
+        <ImageButton
+            android:id="@+id/galleryIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Gallery Icon"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_image_24"
+            android:layout_marginEnd="16dp" />
+
+        <!-- Flash Icon -->
+        <ImageButton
+            android:id="@+id/flashIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Flash Icon"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_flash_on_24"
+            android:layout_marginEnd="16dp" />
+
+        <!-- Camera Switch Icon -->
+        <ImageButton
+            android:id="@+id/cameraSwitchIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Camera Switch Icon"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_flip_camera_ios_24" />
+
+    </LinearLayout>
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topIconsLayout"
+        android:visibility="gone"/>
+<View
+android:id="@+id/viewfinder"
+android:layout_width="230dp"
+android:layout_height="230dp"
+android:visibility="gone"
+   android:layout_centerInParent="true"
+    android:background="@android:color/transparent"
+    android:foreground="@drawable/viewfinder_rectangle" />
+</RelativeLayout>

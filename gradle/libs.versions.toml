@@ -1,0 +1,58 @@
+[versions]
+agp = "8.4.0"
+barcodeScanning = "17.3.0"
+cameraCore = "1.2.0"
+camview = "2.0.1"
+core = "3.4.1"
+coreLibrary = "1.0.0"
+googleMaterial = "1.4.0"
+guava = "32.1.3-android"
+kotlin = "1.9.0"
+coreKtx = "1.13.1"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+material = "1.12.0"
+activity = "1.9.2"
+constraintlayout = "2.1.4"
+firebaseFirestoreKtx = "25.1.0"
+materialVersion = "1.9.0"
+navigationFragmentKtx = "2.8.3"
+qrgenerator = "1.0.3"
+qrgenJava = "2.6.0"
+viewpager2 = "1.1.0"
+zxingAndroidEmbedded = "4.3.0"
+
+[libraries]
+androidx-camera-camera2 = { module = "androidx.camera:camera-camera2", version.ref = "cameraCore" }
+androidx-camera-core = { module = "androidx.camera:camera-core", version.ref = "cameraCore" }
+androidx-camera-lifecycle = { module = "androidx.camera:camera-lifecycle", version.ref = "cameraCore" }
+androidx-camera-view = { module = "androidx.camera:camera-view", version.ref = "cameraCore" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-navigation-fragment-ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
+androidx-navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigationFragmentKtx" }
+androidx-viewpager2 = { module = "androidx.viewpager2:viewpager2", version.ref = "viewpager2" }
+barcode-scanning = { module = "com.google.mlkit:barcode-scanning", version.ref = "barcodeScanning" }
+camview = { module = "eu.pivotal.labs.android:CAMView", version.ref = "camview" }
+core = { module = "com.google.zxing:core", version.ref = "core" }
+core-library = { module = "com.example:core-library", version.ref = "coreLibrary" }
+guava = { module = "com.google.guava:guava", version.ref = "guava" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+firebase-firestore-ktx = { group = "com.google.firebase", name = "firebase-firestore-ktx", version.ref = "firebaseFirestoreKtx" }
+material-v140 = { module = "com.google.android.material:material", version.ref = "googleMaterial" }
+material-v190 = { module = "com.google.android.material:material", version.ref = "materialVersion" }
+qrgen-java = { module = "net.glxn.qrgen.android:qrgen-java", version.ref = "qrgenJava" }
+qrgenerator = { module = "androidmads.library.qrgenerator:qrgenerator", version.ref = "qrgenerator" }
+zxing-android-embedded = { module = "com.journeyapps:zxing-android-embedded", version.ref = "zxingAndroidEmbedded" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+

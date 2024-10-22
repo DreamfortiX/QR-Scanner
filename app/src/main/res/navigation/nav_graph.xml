@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_QR">
+    <fragment
+        android:id="@+id/nav_QR"
+        android:name="com.example.qr_scanner.Generate"
+        tools:layout="@layout/fragment_generate"
+        >
+        <action
+            android:id="@+id/action_nav_QR_to_setting2"
+            app:destination="@id/setting" />
+        <action
+            android:id="@+id/action_nav_QR_to_generateQR"
+            app:destination="@id/generateQR" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/scanner"
+        android:name="com.example.qr_scanner.Scanner"
+        android:label="Scanner"
+        tools:layout="@layout/fragment_scanner" >
+        <action
+            android:id="@+id/action_scanner_to_result"
+            app:destination="@id/result" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_History"
+        android:name="com.example.qr_scanner.History"
+        android:label="History"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/setting"
+        android:name="com.example.qr_scanner.Setting"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_setting_to_nav_QR"
+            app:destination="@id/nav_QR" />
+    </fragment>
+    <fragment
+        android:id="@+id/generateQR"
+        android:name="com.example.qr_scanner.GenerateQR"
+        android:label="fragment_generate_q_r"
+        tools:layout="@layout/fragment_generate_q_r" >
+        <action
+            android:id="@+id/action_generateQR_to_nav_QR"
+            app:destination="@id/nav_QR" />
+        <action
+            android:id="@+id/action_generateQR_to_show_QR2"
+            app:destination="@id/show_QR2" />
+    </fragment>
+    <fragment
+        android:id="@+id/result"
+        android:name="com.example.qr_scanner.Result"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/action_result_to_scanner"
+            app:destination="@id/scanner" />
+    </fragment>
+    <fragment
+        android:id="@+id/show_QR2"
+        android:name="com.example.qr_scanner.Show_QR"
+        android:label="fragment_show__q_r"
+        tools:layout="@layout/fragment_show__q_r" >
+
+    </fragment>
+
+
+</navigation>

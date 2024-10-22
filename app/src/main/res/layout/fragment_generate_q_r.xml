@@ -1,0 +1,1362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/Generate_Qr_Container"
+    android:background="@color/linear"
+    tools:context=".GenerateQR">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/linear">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:id="@+id/back" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Text"
+            android:id="@+id/header"
+            android:fontFamily="serif-monospace"
+            android:textStyle="bold"
+            android:textSize="23sp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/white"
+            android:layout_marginStart="16dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Background"
+        android:layout_margin="30dp"
+        android:id="@+id/layout_text"
+        android:visibility="gone"
+        android:paddingVertical="1dp"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/setting_item_back"
+            android:padding="3dp"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/a"
+                android:id="@+id/Text_To_Image"
+                android:layout_marginVertical="30dp"
+                android:layout_gravity="center"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Text"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="16dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Text"
+                android:layout_marginHorizontal="16dp"
+                android:id="@+id/text_to_qr"
+                android:background="@drawable/edit_text_back"
+                android:textColor="#A39797"
+                android:paddingLeft="10dp"
+
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_shape_2"
+                android:layout_gravity="center"
+                android:layout_marginVertical="40dp"
+                android:text="Generate QR Code"
+                android:id="@+id/text_to_qr_btn"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Background"
+        android:layout_margin="30dp"
+        android:visibility="gone"
+        android:id="@+id/layout_website"
+        android:paddingVertical="1dp"
+        android:orientation="vertical"
+        tools:ignore="DuplicateIds">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/setting_item_back"
+            android:padding="3dp"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/b"
+                android:layout_marginVertical="30dp"
+                android:layout_gravity="center"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Website Url"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="16dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="www.panda.com"
+                android:layout_marginHorizontal="16dp"
+                android:id="@+id/website_url"
+                android:background="@drawable/edit_text_back"
+                android:textColor="#A39797"
+                android:paddingLeft="10dp"
+
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_shape_2"
+                android:layout_gravity="center"
+                android:id="@+id/website_qr_btn"
+                android:layout_marginVertical="40dp"
+                android:text="Generate QR Code"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Background"
+        android:layout_margin="30dp"
+        android:visibility="gone"
+        android:id="@+id/layout_wifi"
+        android:paddingVertical="1dp"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/setting_item_back"
+            android:padding="3dp"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/c"
+                android:layout_marginVertical="30dp"
+                android:layout_gravity="center"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Network"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="16dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Network name"
+                android:id="@+id/wifi_username"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/edit_text_back"
+                android:textColor="#A39797"
+                android:paddingLeft="10dp"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="16dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="password"
+                android:id="@+id/wifi_password"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/edit_text_back"
+                android:textColor="#A39797"
+                android:paddingLeft="10dp"
+
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_shape_2"
+                android:layout_gravity="center"
+                android:layout_marginVertical="40dp"
+                android:text="Generate QR Code"
+                android:padding="10dp"
+                android:id="@+id/wifi_qr_btn"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Background"
+        android:layout_margin="30dp"
+        android:visibility="gone"
+        android:id="@+id/layout_whatsapp"
+        android:paddingVertical="1dp"
+        android:orientation="vertical"
+        tools:ignore="DuplicateIds">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/setting_item_back"
+            android:padding="3dp"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/h"
+                android:layout_marginVertical="30dp"
+                android:layout_gravity="center"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Whatsapp Number"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="16dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Enter Number"
+                android:id="@+id/whatsapp_number"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/edit_text_back"
+                android:textColor="#A39797"
+                android:paddingLeft="10dp"
+
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_shape_2"
+                android:layout_gravity="center"
+                android:layout_marginVertical="40dp"
+                android:text="Generate QR Code"
+                android:id="@+id/whatsapp_qr_btn"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Background"
+        android:layout_margin="30dp"
+        android:visibility="gone"
+        android:id="@+id/layout_twitter"
+        android:paddingVertical="1dp"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/setting_item_back"
+            android:padding="3dp"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/j"
+                android:layout_marginVertical="30dp"
+                android:layout_gravity="center"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="16dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Username"
+                android:id="@+id/twitter_username"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/edit_text_back"
+                android:textColor="#A39797"
+                android:paddingLeft="10dp"
+
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_shape_2"
+                android:layout_gravity="center"
+                android:layout_marginVertical="40dp"
+                android:text="Generate QR Code"
+                android:padding="10dp"
+                android:id="@+id/twitter_qr_btn"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Background"
+        android:layout_margin="30dp"
+        android:visibility="gone"
+        android:id="@+id/layout_Email"
+        android:paddingVertical="1dp"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/setting_item_back"
+            android:padding="3dp"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/i"
+                android:layout_marginVertical="30dp"
+                android:layout_gravity="center"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter Email"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="16dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Enter Email"
+                android:id="@+id/email"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/edit_text_back"
+                android:textColor="#A39797"
+                android:paddingLeft="10dp"
+
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_shape_2"
+                android:layout_gravity="center"
+                android:layout_marginVertical="40dp"
+                android:text="Generate QR Code"
+                android:id="@+id/email_qr_btn"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Background"
+        android:layout_margin="30dp"
+        android:visibility="gone"
+        android:id="@+id/layout_instagram"
+        android:paddingVertical="1dp"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/setting_item_back"
+            android:padding="3dp"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/k"
+                android:layout_marginVertical="30dp"
+                android:layout_gravity="center"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="16dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Enter Username"
+                android:id="@+id/instagram_username"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/edit_text_back"
+                android:textColor="#A39797"
+                android:paddingLeft="10dp"
+
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_shape_2"
+                android:layout_gravity="center"
+                android:layout_marginVertical="40dp"
+                android:text="Generate QR Code"
+                android:id="@+id/instagram_qr_btn"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Background"
+        android:layout_margin="30dp"
+        android:visibility="gone"
+        android:id="@+id/layout_phone"
+        android:paddingVertical="1dp"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/setting_item_back"
+            android:padding="3dp"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/l"
+                android:layout_marginVertical="30dp"
+                android:layout_gravity="center"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone Number"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="16dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="+92xxxxxxxxxx"
+                android:id="@+id/phone_number"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/edit_text_back"
+                android:textColor="#A39797"
+                android:paddingLeft="10dp"
+
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_shape_2"
+                android:layout_gravity="center"
+                android:layout_marginVertical="40dp"
+                android:text="Generate QR Code"
+                android:id="@+id/phone_qr_btn"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Background"
+        android:layout_marginHorizontal="30dp"
+        android:paddingVertical="1dp"
+        android:visibility="gone"
+        android:id="@+id/layout_event"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/setting_item_back"
+            android:padding="3dp"
+            >
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/d"
+                android:layout_marginVertical="10dp"
+                android:layout_gravity="center"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Event Name"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="16dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="Enter Name"
+                android:id="@+id/event_name"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/edit_text_back"
+                android:textColor="#A39797"
+                android:paddingLeft="10dp"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start Date $ Time"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="16dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="12 dec 2022 10:22 pm"
+                android:id="@+id/event_date_time"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/edit_text_back"
+                android:textColor="#A39797"
+                android:paddingLeft="10dp"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="End date &amp; Time"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="16dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="12 dec 2022 10:33 pm"
+                android:id="@+id/event_date_end"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/edit_text_back"
+                android:textColor="#A39797"
+                android:paddingLeft="10dp"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Event location"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="16dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="Enter Location"
+                android:id="@+id/event_location"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/edit_text_back"
+                android:textColor="#A39797"
+                android:paddingLeft="10dp"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="16dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Type your description here"
+                android:inputType="textMultiLine"
+                android:gravity="top|start"
+                android:minHeight="100dp"
+                android:id="@+id/event_description"
+                android:maxLines="5"
+                android:textColor="#A39797"
+                android:layout_marginHorizontal="16sp"
+                android:background="@drawable/edit_text_back"
+                android:paddingLeft="10dp"
+
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_shape_2"
+                android:layout_gravity="center"
+                android:layout_marginVertical="40dp"
+                android:text="Generate QR Code"
+                android:id="@+id/event_qr_btn"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Background"
+        android:layout_marginHorizontal="30dp"
+        android:paddingVertical="1dp"
+        android:visibility="gone"
+        android:id="@+id/layout_business"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/setting_item_back"
+            android:padding="3dp"
+            >
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/f"
+                android:layout_marginVertical="10dp"
+                android:layout_gravity="center"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Company Name"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="16dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="Enter Name"
+                android:id="@+id/business_name"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/edit_text_back"
+                android:textColor="#A39797"
+                android:paddingLeft="10dp"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Industry"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="16dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="e.g food/agency"
+                android:id="@+id/business_category"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/edit_text_back"
+                android:textColor="#A39797"
+                android:paddingLeft="10dp"
+
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:layout_marginVertical="5dp"
+                        android:layout_marginHorizontal="16dp"
+                        />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:text="email"
+                        android:id="@+id/business_email"
+                        android:layout_marginHorizontal="16dp"
+                        android:background="@drawable/edit_text_back"
+                        android:textColor="#A39797"
+                        android:paddingLeft="10dp"
+
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Phone"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:layout_marginVertical="5dp"
+                        android:layout_marginHorizontal="16dp"
+                        />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:text="+92xxxxxxxxx"
+                        android:id="@+id/business_phone"
+                        android:layout_marginHorizontal="16dp"
+                        android:background="@drawable/edit_text_back"
+                        android:textColor="#A39797"
+                        android:paddingLeft="10dp"
+
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Website"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="16dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="Enter website"
+                android:id="@+id/business_website"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/edit_text_back"
+                android:textColor="#A39797"
+                android:paddingLeft="10dp"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adddress"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="16dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="Enter Address"
+                android:id="@+id/business_address"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/edit_text_back"
+                android:textColor="#A39797"
+                android:paddingLeft="10dp"
+
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="City"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:layout_marginVertical="5dp"
+                        android:layout_marginHorizontal="16dp"
+                        />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:text="city"
+                        android:id="@+id/business_city"
+                        android:layout_marginHorizontal="16dp"
+                        android:background="@drawable/edit_text_back"
+                        android:textColor="#A39797"
+                        android:paddingLeft="10dp"
+
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Country"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:layout_marginVertical="5dp"
+                        android:layout_marginHorizontal="16dp"
+                        />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:text="country"
+                        android:id="@+id/business_country"
+                        android:layout_marginHorizontal="16dp"
+                        android:background="@drawable/edit_text_back"
+                        android:textColor="#A39797"
+                        android:paddingLeft="10dp"
+
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_shape_2"
+                android:layout_gravity="center"
+                android:layout_marginVertical="40dp"
+                android:text="Generate QR Code"
+                android:id="@+id/business_qr_btn"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                />
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Background"
+        android:layout_marginHorizontal="30dp"
+        android:paddingVertical="1dp"
+        android:visibility="gone"
+        android:id="@+id/layout_contact"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/setting_item_back"
+            android:padding="3dp"
+            >
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/e"
+                android:layout_marginVertical="10dp"
+                android:layout_gravity="center"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="First Name"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:layout_marginVertical="5dp"
+                        android:layout_marginHorizontal="16dp"
+                        />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:text="Name"
+                        android:id="@+id/contact_f_name"
+                        android:layout_marginHorizontal="16dp"
+                        android:background="@drawable/edit_text_back"
+                        android:textColor="#A39797"
+                        android:paddingLeft="10dp"
+
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last Name"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:layout_marginVertical="5dp"
+                        android:layout_marginHorizontal="16dp"
+                        />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:text="Last Name"
+                        android:id="@+id/contact_l_name"
+                        android:layout_marginHorizontal="16dp"
+                        android:background="@drawable/edit_text_back"
+                        android:textColor="#A39797"
+                        android:paddingLeft="10dp"
+
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Company"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:layout_marginVertical="5dp"
+                        android:layout_marginHorizontal="16dp"
+                        />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:text="Company"
+                        android:id="@+id/contact_company"
+                        android:layout_marginHorizontal="16dp"
+                        android:background="@drawable/edit_text_back"
+                        android:textColor="#A39797"
+                        android:paddingLeft="10dp"
+
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Job"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:layout_marginVertical="5dp"
+                        android:layout_marginHorizontal="16dp"
+                        />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:text="Job"
+                        android:id="@+id/contact_job"
+                        android:layout_marginHorizontal="16dp"
+                        android:background="@drawable/edit_text_back"
+                        android:textColor="#A39797"
+                        android:paddingLeft="10dp"
+
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:layout_marginVertical="5dp"
+                        android:layout_marginHorizontal="16dp"
+                        />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:text="email"
+                        android:id="@+id/contact_email"
+                        android:layout_marginHorizontal="16dp"
+                        android:background="@drawable/edit_text_back"
+                        android:textColor="#A39797"
+                        android:paddingLeft="10dp"
+
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Phone"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:layout_marginVertical="5dp"
+                        android:layout_marginHorizontal="16dp"
+                        />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:text="+92xxxxxxxxx"
+                        android:id="@+id/contact_phone"
+                        android:layout_marginHorizontal="16dp"
+                        android:background="@drawable/edit_text_back"
+                        android:textColor="#A39797"
+                        android:paddingLeft="10dp"
+
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Website"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="16dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="Enter website"
+                android:id="@+id/contact_website"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/edit_text_back"
+                android:textColor="#A39797"
+                android:paddingLeft="10dp"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adddress"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="16dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="Enter Address"
+                android:id="@+id/contact_address"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/edit_text_back"
+                android:textColor="#A39797"
+                android:paddingLeft="10dp"
+
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="City"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:layout_marginVertical="5dp"
+                        android:layout_marginHorizontal="16dp"
+                        />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:text="city"
+                        android:id="@+id/contact_city"
+                        android:layout_marginHorizontal="16dp"
+                        android:background="@drawable/edit_text_back"
+                        android:textColor="#A39797"
+                        android:paddingLeft="10dp"
+
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Country"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:layout_marginVertical="5dp"
+                        android:layout_marginHorizontal="16dp"
+                        />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:text="country"
+                        android:id="@+id/contact_country"
+                        android:layout_marginHorizontal="16dp"
+                        android:background="@drawable/edit_text_back"
+                        android:textColor="#A39797"
+                        android:paddingLeft="10dp"
+
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_shape_2"
+                android:layout_gravity="center"
+                android:layout_marginVertical="40dp"
+                android:id="@+id/contact_qr_btn"
+                android:text="Generate QR Code"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Background"
+        android:layout_margin="30dp"
+        android:visibility="gone"
+        android:id="@+id/layout_location"
+        android:paddingVertical="1dp"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/setting_item_back"
+            android:padding="3dp"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/g"
+                android:layout_marginVertical="30dp"
+                android:layout_gravity="center"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="16dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="enter location"
+                android:id="@+id/location"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/edit_text_back"
+                android:textColor="#A39797"
+                android:paddingLeft="10dp"
+
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_shape_2"
+                android:layout_gravity="center"
+                android:layout_marginVertical="40dp"
+                android:text="Generate QR Code"
+                android:id="@+id/location_qr_btn"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
+
+
+
+</LinearLayout>
