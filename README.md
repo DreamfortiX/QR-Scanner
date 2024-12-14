@@ -17,7 +17,7 @@
 
 Here’s a glimpse of the app interface:
 
-![QR Code Generator]([https://github.com/DreamfortiX/QR-App/raw/main/assets/qr_generator.png](https://github.com/DreamfortiX/QR-Scanner/blob/c3143983770f8c2306f10ecc73fe7a085257173a/QR.png))
+![QR Code Generator](https://github.com/DreamfortiX/QR-Scanner/blob/c3143983770f8c2306f10ecc73fe7a085257173a/QR.png)
 
 ---
 
@@ -32,4 +32,4 @@ Here’s a glimpse of the app interface:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/DreamfortiX/QR-App.git
+   [git clone https://github.com/DreamfortiX/QR-App.git](https://github.com/DreamfortiX/QR-Scanner.git)
