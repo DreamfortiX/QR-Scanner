@@ -17,8 +17,7 @@
 
 Here’s a glimpse of the app interface:
 
-![QR Code Generator](https://github.com/DreamfortiX/QR-App/raw/main/assets/qr_generator.png)
-![QR Code Scanner](https://github.com/DreamfortiX/QR-App/raw/main/assets/qr_scanner.png)
+![QR Code Generator]([https://github.com/DreamfortiX/QR-App/raw/main/assets/qr_generator.png](https://github.com/DreamfortiX/QR-Scanner/blob/c3143983770f8c2306f10ecc73fe7a085257173a/QR.png))
 
 ---
 
